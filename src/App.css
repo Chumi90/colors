@@ -19,6 +19,14 @@
   border: 1px solid white;
 }
 
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
 /* Estilos para cada una de las box */
 .box {
   display: flex;
@@ -29,7 +37,24 @@
   border-width: 1px;
   border-style: solid;
   color: white;
+  margin: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s, color 0.3s;
 }
+
+/* Colores individuales para mejor contraste si se desea */
+.box.red { border-color: #b71c1c; }
+.box.green { border-color: #1b5e20; }
+.box.pink { border-color: #ad1457; }
+.box.yellow { border-color: #fbc02d; color: #333; }
+.box.purple { border-color: #6a1b9a; }
+.box.white { border-color: #ccc; color: #333; }
+.box.blue { border-color: #0d47a1; }
+.box.aqua { border-color: #00838f; }
+.box.olive { border-color: #827717; }
 
 /* Estilos para el input */
 input {
