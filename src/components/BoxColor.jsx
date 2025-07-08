@@ -8,12 +8,13 @@ function BoxColor ({color, inputValue }) {
       ref={boxRef}
       className={`box ${color}`}
       style={{
-        background: color, // Siempre el color de la variable
-        color: color === 'white' || color === 'yellow' ? '#333' : '#fff',
+        background: isMatch ? color : 'transparent',
+        color: isMatch ? '#111' : (color === 'white' || color === 'yellow' ? '#333' : color),
         boxShadow: isMatch ? '0 0 20px 5px #0002' : undefined,
-        borderWidth: isMatch ? 3 : 1,
+        borderWidth: 3,
         borderStyle: 'solid',
-        borderColor: isMatch ? '#222' : color
+        borderColor: color,
+        transition: 'background 0.3s, color 0.3s'
       }}
     >
       <p>{isMatch ? `¡Soy el color ${color}!` : 'No soy el color'}</p>
